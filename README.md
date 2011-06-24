@@ -17,7 +17,7 @@ would be using it). To build without running the unit test
 > mvn clean install -Dmaven.test.skip=true
 
 To test Standalone, you can start the Camel route using the include camel-maven-plugin, which will
-start all Spring based camel context files located in META-INF/spring (like this projects)
+start all Spring based camel context files located in `META-INF/spring` (like this projects)
 > mvn camel:run
 
 To run the standalone client, which will call the service with the string 'Scott', and printed the
@@ -28,8 +28,9 @@ To install in ServiceMix (4.3.1 or later)
 > bin/servicemix
 
 In ServiceMix Console
-karaf@root> features:install camel-jetty
-karaf@root> osgi:install -s mvn:com.fusesource.byexample.hellocamel/HelloCamel
+
+    karaf@root> features:install camel-jetty
+    karaf@root> osgi:install -s mvn:com.fusesource.byexample.hellocamel/HelloCamel
 
 Once you've started the service - the '-s' option to osgi:install will start the bundle once installed - you
 can test using the standalone client
