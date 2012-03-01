@@ -104,19 +104,18 @@
         </dependency>
 
         <dependency>
-			<groupId>org.apache.camel</groupId>
+            <groupId>org.apache.camel</groupId>
             <artifactId>camel-test</artifactId>
             <version>${camel.version}</version>
             <scope>test</scope>
         </dependency>
         
         <dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.6.2</version>
-			<scope>runtime</scope>
-		</dependency>
-        
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.2</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <!--
