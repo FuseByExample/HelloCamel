@@ -32,7 +32,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <camel.version>2.9.0.fuse-70-097</camel.version>
+        <camel.version>2.10.0.fuse-71-047</camel.version>
+
+        <slf4j.version>1.6.6</slf4j.version>
     </properties>
 
     <licenses>
@@ -108,6 +110,11 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
             <artifactId>camel-spring</artifactId>
             <version>${camel.version}</version>
         </dependency>
@@ -124,11 +131,17 @@
             <version>${camel.version}</version>
             <scope>test</scope>
         </dependency>
-        
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test-spring</artifactId>
+            <version>${camel.version}</version>
+            <scope>test</scope>
+        </dependency>
+
       <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.1</version>
+            <version>${slf4j.version}</version>
             <scope>runtime</scope>
         </dependency>
     </dependencies>
@@ -139,28 +152,28 @@
     -->
     <repositories>
         <repository>
-            <id>fusesource.releases</id>
+            <id>release.fusesource.org</id>
             <name>FuseSource Release Repository</name>
-            <url>http://repo.fusesource.com/nexus/content/repositories/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>fusesource.releases</id>
+            <id>release.fusesource.org</id>
             <name>FuseSource Release Repository</name>
-            <url>http://repo.fusesource.com/nexus/content/repositories/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </pluginRepository>
     </pluginRepositories>
 
