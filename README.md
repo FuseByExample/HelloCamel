@@ -9,7 +9,7 @@ in the excellent ServiceMix OSGi integration server.
 
 Requirements:
 
-* Fuse ESB 7.0.2 (http://fusesource.com/downloads/)
+* JBoss Fuse 6.0.0
 * Maven 2.2.1 or 3.0 (http://maven.apache.org/)
 * Java SE 6
 
