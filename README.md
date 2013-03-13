@@ -7,13 +7,13 @@ prefixes 'Hello ' to the String body sent to it. The goal of this project is to 
 starter project for creating your own more complicated and useful Camel Routes that can be deployed
 in the excellent ServiceMix OSGi integration server.
 
-Requirements:
-
-* JBoss Fuse 6.0.0
-* Maven 2.2.1 or 3.0 (http://maven.apache.org/)
+### Requirements:
+* JBoss Fuse 6.0.0 (http://www.jboss.org/jbossfuse)
+* Maven 3.x (http://maven.apache.org/)
 * Java SE 6
 
-## Building
+Building
+--------
 
 To build
 
@@ -26,7 +26,8 @@ would be using it). To build without running the unit test
 
     mvn clean install -Dmaven.test.skip=true
 
-## Running from the command line
+Running from the command line
+-----------------------------
 
 To test Standalone, you can start the Camel route using the included camel-maven-plugin, which will
 start all Spring based camel context files located in `META-INF/spring` (like this projects)
@@ -38,13 +39,14 @@ response (which should be 'Hello Scott') to stdout
 
     mvn exec:java
 
-## Deploying to Fuse ESB
+Deploying to JBoss Fuse
+-----------------------
 
-To install in Fuse ESB
+To install in JBoss Fuse
 
-    <Fuse ESB Home>/bin/fuseesb
+    <JBoss Fuse Home>/bin/fuse
 
-In Fuse ESB Console
+In JBoss Fuse Console
 
     karaf@root> features:install camel-jetty
     karaf@root> osgi:install -s mvn:com.fusesource.byexample.hellocamel/HelloCamel/1.0.0
