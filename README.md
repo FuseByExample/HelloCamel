@@ -55,3 +55,9 @@ Once you've started the service - the '-s' option to osgi:install will start the
 can test using the standalone client
 
     mvn exec:java
+
+Note: With JBoss Fuse 6.0 Beta, you may see error entries about
+`java.lang.ClassNotFoundException: org.apache.camel.component.jms.JmsBinding`, this has been corrected post Beta.
+To work around this, you can run the following command in the JBoss Fuse console
+
+    karaf@root> features:install activemq-camel

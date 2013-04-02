@@ -34,7 +34,7 @@
 
         <camel.version>2.10.0.redhat-60015</camel.version>
 
-        <slf4j.version>1.7.2</slf4j.version>
+        <slf4j.version>1.6.6</slf4j.version>
     </properties>
 
     <licenses>
@@ -81,7 +81,7 @@
                     </instructions>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -99,7 +99,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>1.2.1</version>
                 <configuration>
                     <mainClass>com.fusesource.byexample.hellocamel.impl.HelloCamelClient</mainClass>
                 </configuration>
@@ -138,7 +138,12 @@
             <scope>test</scope>
         </dependency>
 
-      <dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
