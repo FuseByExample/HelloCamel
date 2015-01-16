@@ -8,9 +8,9 @@ starter project for creating your own more complicated and useful Camel Routes t
 in the excellent ServiceMix OSGi integration server.
 
 ### Requirements:
-* JBoss Fuse 6.0.0 (http://www.jboss.org/jbossfuse)
+* JBoss Fuse 6.2.0 (http://www.jboss.org/jbossfuse)
 * Maven 3.x (http://maven.apache.org/)
-* Java SE 6
+* Java SE 7
 
 Building
 --------
