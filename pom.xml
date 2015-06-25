@@ -108,6 +108,8 @@
                 <version>${exec.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>com.fusesource.byexample.hellocamel.impl.HelloCamelClient</mainClass>
+                    <killAfter>-1</killAfter>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
         </plugins>
