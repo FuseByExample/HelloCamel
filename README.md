@@ -5,12 +5,12 @@ This project demonstrates a minimal Camel project that creates an OSGi bundle, h
 a test client that uses Camel. The Camel route is simple: an HTTP request-response service that
 prefixes 'Hello ' to the String body sent to it. The goal of this project is to provide a good
 starter project for creating your own more complicated and useful Camel Routes that can be deployed
-in the excellent ServiceMix OSGi integration server.
+in JBoss Fuse 
 
 ### Requirements:
 * JBoss Fuse 6.2.0 (http://www.jboss.org/jbossfuse)
-* Maven 3.x (http://maven.apache.org/)
-* Java SE 7
+* Maven 3.2.3 (http://maven.apache.org/)
+* Java SE 7 or Java SE 8
 
 Building
 --------
@@ -20,8 +20,8 @@ To build
     mvn clean install
 
 As part of the basic build it will run a standalone unit test every time. Once you deploy this
-project to ServiceMix, you may see a build error where the unit test tries to start Camel, and
-it fails because it can't acquire the localhost port 8888 (because your running route in ServiceMix
+project to JBoss Fuse, you may see a build error where the unit test tries to start Camel, and
+it fails because it can't acquire the localhost port 8888 (because your running route in JBoss Fuse
 would be using it). To build without running the unit test
 
     mvn clean install -Dmaven.test.skip=true
@@ -55,9 +55,3 @@ Once you've started the service - the '-s' option to osgi:install will start the
 can test using the standalone client
 
     mvn exec:java
-
-Note: With JBoss Fuse 6.0 Beta, you may see error entries about
-`java.lang.ClassNotFoundException: org.apache.camel.component.jms.JmsBinding`, this has been corrected post Beta.
-To work around this, you can run the following command in the JBoss Fuse console
-
-    karaf@root> features:install activemq-camel
