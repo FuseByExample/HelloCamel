@@ -8,7 +8,7 @@ starter project for creating your own more complicated and useful Camel Routes t
 in JBoss Fuse 
 
 ### Requirements:
-* JBoss Fuse 6.2.0 (http://www.jboss.org/jbossfuse)
+* JBoss Fuse 6.3.0 (http://www.jboss.org/jbossfuse)
 * Maven 3.2.3 (http://maven.apache.org/)
 * Java SE 7 or Java SE 8
 
